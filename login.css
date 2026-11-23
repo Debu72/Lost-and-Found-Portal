@@ -1,0 +1,226 @@
+/* Theme Variables (Supabase / Developer Minimalist Aesthetic) */
+    :root {
+      --bg: #f8f9fa;
+      --surface: #ffffff;
+      --text: #1c1c1c;
+      --text-muted: #687076;
+      --border: #e6e8eb;
+      --input-bg: #ffffff;
+      --primary: #3ecf8e;
+      --primary-hover: #34b27b;
+      --primary-text: #11181c;
+      --btn-social-hover: #f1f3f5;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --surface: #1c1c1c;
+      --text: #ededed;
+      --text-muted: #8f8f8f;
+      --border: #2e2e2e;
+      --input-bg: #161616;
+      --primary: #3ecf8e;
+      --primary-hover: #34b27b;
+      --primary-text: #11181c;
+      --btn-social-hover: #262626;
+      --shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      transition: background-color 0.2s, color 0.2s;
+    }
+
+    /* Theme Toggle Button */
+    .theme-toggle {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .theme-toggle:hover {
+      background: var(--btn-social-hover);
+    }
+
+    /* Main Card */
+    .login-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      width: 100%;
+      max-width: 380px;
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+
+    .header {
+      margin-bottom: 1.5rem;
+    }
+
+    .header h1 {
+      font-size: 1.35rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.35rem;
+    }
+
+    .header p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    /* OAuth Buttons */
+    .social-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .btn-social {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      width: 100%;
+      padding: 0.6rem 1rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    .btn-social:hover {
+      background: var(--btn-social-hover);
+    }
+
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin: 1.35rem 0;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .divider span {
+      padding: 0 0.75rem;
+    }
+
+    /* Form Controls */
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+
+    label {
+      font-size: 0.825rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .forgot-link {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .forgot-link:hover {
+      color: var(--text);
+      text-decoration: underline;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.6rem 0.75rem;
+      background: var(--input-bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+
+    input:focus {
+      border-color: var(--primary);
+    }
+
+    /* Primary Submit Button */
+    .btn-primary {
+      width: 100%;
+      padding: 0.65rem 1rem;
+      margin-top: 0.35rem;
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      border-radius: 6px;
+      color: var(--primary-text);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.15s;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    /* Footer */
+    .footer-text {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.825rem;
+      color: var(--text-muted);
+    }
+
+    .footer-text a {
+      color: var(--text);
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }

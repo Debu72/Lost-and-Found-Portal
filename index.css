@@ -1,0 +1,201 @@
+:root {
+      --bg: #f8f9fa;
+      --surface: #ffffff;
+      --text: #1c1c1c;
+      --text-muted: #687076;
+      --border: #e6e8eb;
+      --primary: #3ecf8e;
+      --primary-hover: #34b27b;
+      --primary-text: #11181c;
+      --hover: #f1f3f5;
+      --badge-lost: #fee2e2;
+      --badge-lost-text: #991b1b;
+      --badge-found: #dcfce7;
+      --badge-found-text: #166534;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --surface: #1c1c1c;
+      --text: #ededed;
+      --text-muted: #8f8f8f;
+      --border: #2e2e2e;
+      --hover: #262626;
+      --badge-lost: rgba(239, 68, 68, 0.15);
+      --badge-lost-text: #f87171;
+      --badge-found: rgba(62, 207, 142, 0.15);
+      --badge-found-text: #3ecf8e;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: var(--primary-text);
+      border: none;
+      padding: 0.5rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .icon-btn:hover {
+      background: var(--hover);
+    }
+
+    /* Main Layout */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    /* Search Bar */
+    .search-box {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .search-box svg {
+      position: absolute;
+      left: 0.9rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+    }
+
+    .search-input {
+      width: 100%;
+      padding: 0.75rem 1rem 0.75rem 2.6rem;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      font-size: 0.95rem;
+      outline: none;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    /* Responsive Items Grid */
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    /* Sample Card */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .badge {
+      padding: 0.2rem 0.55rem;
+      border-radius: 4px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .badge.lost {
+      background: var(--badge-lost);
+      color: var(--badge-lost-text);
+    }
+
+    .badge.found {
+      background: var(--badge-found);
+      color: var(--badge-found-text);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .card-meta {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+    }

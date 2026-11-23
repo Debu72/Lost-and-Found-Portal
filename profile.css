@@ -1,0 +1,203 @@
+:root {
+      --bg: #f8f9fa;
+      --surface: #ffffff;
+      --text: #1c1c1c;
+      --text-muted: #687076;
+      --border: #e6e8eb;
+      --primary: #3ecf8e;
+      --hover: #f1f3f5;
+      --danger: #dc2626;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+    }
+
+    [data-theme="dark"] {
+      --bg: #121212;
+      --surface: #1c1c1c;
+      --text: #ededed;
+      --text-muted: #8f8f8f;
+      --border: #2e2e2e;
+      --hover: #262626;
+      --danger: #f87171;
+      --danger-bg: rgba(239, 68, 68, 0.1);
+      --danger-border: rgba(239, 68, 68, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 0.85rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: var(--text);
+    }
+
+    .icon-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .icon-btn:hover {
+      background: var(--hover);
+    }
+
+    /* Profile Card */
+    .container {
+      max-width: 480px;
+      margin: 3rem auto;
+      padding: 0 1.25rem;
+    }
+
+    .profile-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 1.75rem;
+    }
+
+    .user-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: var(--hover);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+
+    .user-header h1 {
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .user-header p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Details List */
+    .info-list {
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.875rem;
+    }
+
+    .info-label {
+      color: var(--text-muted);
+    }
+
+    .info-value {
+      font-weight: 500;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.85rem;
+      margin: 1.25rem 0;
+    }
+
+    .stat-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .stat-num {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Logout Button */
+    .btn-logout {
+      width: 100%;
+      padding: 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--danger-border);
+      background: var(--danger-bg);
+      color: var(--danger);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.15s;
+    }
+
+    .btn-logout:hover {
+      opacity: 0.85;
+    }
